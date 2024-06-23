@@ -16,7 +16,7 @@ async function main() {
     throw new Error("COSMOS_DB_CONNECTION_STRING is not defined in the environment variables");
   }
 
-  console.log("+++++++++++++++ MAIN STARTING +++++++++++++++");
+  console.log("+++++++++++++++ MAIN STARTING +++++++++++++++ ");
 
   await mongoose.connect(connectionString, {
     useUnifiedTopology: true,
