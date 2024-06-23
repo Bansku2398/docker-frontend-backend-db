@@ -16,10 +16,14 @@ async function main() {
     throw new Error("COSMOS_DB_CONNECTION_STRING is not defined in the environment variables");
   }
 
+  console.log("+++++++++++++++ MAIN STARTING +++++++++++++++");
+
   await mongoose.connect(connectionString, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   });
+
+  console.log("+++++++++++++++ DB CONNECTED +++++++++++++++");
 
   const app = express();
   app.use(cors());
